@@ -175,7 +175,7 @@ public class UIAnimationGraphView : GraphView
             node.AnimationType = (UIAnimationTypes) enumField.value;
         });
         node.mainContainer.Add(enumField);
-
+        
         node.RefreshExpandedState();
         node.RefreshPorts();
         

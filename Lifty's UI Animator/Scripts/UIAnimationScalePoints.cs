@@ -13,6 +13,9 @@ public class UIAnimationScalePoints : UIAnimation
     {
         if (animatedObject == null) return;
 
-        DOVirtual.Float(startScale, endScale, animationDuration, value => animatedObject.localScale = value * Vector3.one).SetEase(animationEase);
+        if(!reversed)
+            DOVirtual.Float(startScale, endScale, animationDuration, value => animatedObject.localScale = value * Vector3.one).SetEase(animationEase);
+        else
+            DOVirtual.Float(endScale, startScale, animationDuration, value => animatedObject.localScale = value * Vector3.one).SetEase(animationEase);
     }
 }

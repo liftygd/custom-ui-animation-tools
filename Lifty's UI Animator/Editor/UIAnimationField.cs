@@ -8,7 +8,7 @@ public class UIAnimationField
 {
     public static VisualElement GetFields(FieldInfo fieldInfo, UIAnimationObject obj)
     {
-        return GetFields(fieldInfo, obj);
+        return GetFieldsFunction(fieldInfo, obj);
     }
     
     private static VisualElement GetFieldsFunction(FieldInfo fieldInfo, UIAnimationObject obj)
